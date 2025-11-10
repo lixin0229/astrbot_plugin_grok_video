@@ -1,0 +1,10 @@
+name: "astrbot_plugin_grok_video"
+description: "Grok视频生成插件，支持根据图片和提示词生成视频"
+version: "1.0.0"
+author: "ShiHao
+repo: ""
+plugin_type: "platform"
+entry: "main.py"
+requirements:
+  - "httpx>=0.24.0"
+  - "aiofiles>=23.0.0"

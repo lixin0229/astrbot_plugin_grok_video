@@ -1,0 +1,89 @@
+{
+  "server_url": {
+    "description": "Grok API服务器地址",
+    "type": "string",
+    "hint": "输入服务器地址，例如：https://api.x.ai（会自动补全/v1/chat/completions）",
+    "default": "https://api.x.ai"
+  },
+  "model_id": {
+    "description": "模型ID",
+    "type": "string",
+    "hint": "输入模型ID，例如：grok-imagine-0.9",
+    "default": "grok-imagine-0.9"
+  },
+  "api_key": {
+    "description": "API密钥",
+    "type": "string",
+    "hint": "输入您的Grok API密钥",
+    "default": ""
+  },
+  "enabled": {
+    "description": "启用视频生成功能",
+    "type": "bool",
+    "default": true
+  },
+  "timeout_seconds": {
+    "description": "请求超时时间（秒）",
+    "type": "int",
+    "hint": "API请求的超时时间，建议120-300秒",
+    "default": 180
+  },
+  "max_retry_attempts": {
+    "description": "最大重试次数",
+    "type": "int",
+    "hint": "API请求失败时的最大重试次数",
+    "default": 3
+  },
+  "admin_users": {
+    "description": "管理员用户ID列表（可以使用测试命令）",
+    "type": "list",
+    "default": []
+  },
+  "group_control_mode": {
+    "description": "群组控制模式",
+    "type": "string",
+    "options": ["off", "whitelist", "blacklist"],
+    "hint": "off: 不限制, whitelist: 仅白名单群组可用, blacklist: 黑名单群组不可用",
+    "default": "off"
+  },
+  "group_list": {
+    "description": "群组ID列表（白名单或黑名单）",
+    "type": "list",
+    "default": []
+  },
+  "rate_limit_enabled": {
+    "description": "启用速率限制",
+    "type": "bool",
+    "default": true
+  },
+  "rate_limit_window_seconds": {
+    "description": "速率限制时间窗口（秒）",
+    "type": "int",
+    "hint": "在此时间窗口内限制调用次数",
+    "default": 3600
+  },
+  "rate_limit_max_calls": {
+    "description": "速率限制最大调用次数",
+    "type": "int",
+    "hint": "在时间窗口内允许的最大调用次数",
+    "default": 5
+  },
+  "save_video_enabled": {
+    "description": "保留生成的视频文件",
+    "type": "bool",
+    "hint": "true 表示发送后保留视频；false 表示成功发送后自动清理缓存",
+    "default": false
+  },
+  "nap_server_address": {
+    "description": "NapCat 文件服务器地址",
+    "type": "string",
+    "hint": "可选：配置 NapCat 文件中转服务的地址",
+    "default": ""
+  },
+  "nap_server_port": {
+    "description": "NapCat 文件服务器端口",
+    "type": "int",
+    "hint": "可选：配置 NapCat 文件中转服务端口",
+    "default": 0
+  }
+}
